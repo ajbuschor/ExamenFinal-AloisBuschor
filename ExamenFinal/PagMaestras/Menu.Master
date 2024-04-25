@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="ExamenFinal.Capa_Presentacion.Menu" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../CSS/MenuCircular.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="height: 150px; width: 1434px">
+    <form id="form1" runat="server">
+        <div>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+                rel="stylesheet">
+            <div class="menu">
+                <input type="checkbox" id="toggle" />
+                <label id="show-menu" for="toggle">
+                    <div class="btn">
+                        <i class="material-icons md-36 toggleBtn menuBtn">menu</i>
+                        <i class="material-icons md-36 toggleBtn closeBtn">close</i>
+                    </div>
+                    <a href="MenuPrin.aspx" class="btn">
+                        <i class="material-icons md-36">home</i>
+                        <!-- Puedes usar un ícono de casa para representar "Inicio" -->
+                        <span>Inicio</span>
+                    </a>
+                    <a href="Agente.aspx" class="btn">
+                        <i class="material-icons md-36">people</i>
+                        <!-- Ícono para representar "Agentes" -->
+                        <span>Agentes</span>
+                    </a>
+                    <a href="Cliente.aspx" class="btn">
+                        <i class="material-icons md-36">person</i>
+                        <!-- Ícono para representar "Clientes" -->
+                        <span>Clientes</span>
+                    </a>
+                </label>
+            </div>
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
